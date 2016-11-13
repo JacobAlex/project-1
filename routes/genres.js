@@ -15,7 +15,6 @@ router.get("/", function(req, res){
 
 //CREATE - add new genre to DB
 router.post("/", function(req, res){
-    // get data from form and add to genres array
     var name = req.body.name;
     var author = {
         id: req.user._id,
