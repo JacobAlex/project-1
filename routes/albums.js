@@ -2,10 +2,9 @@ var express = require('express');
 var router = express.Router();
 var Album = require('../models/Album');
 
-//INDEX - show all albums
 router.get("/", function(req, res){
     // Get all albums from DB
-    Campground.find({}, function(err, allAlbums){
+    Album.find({}, function(err, allAlbums){
        if(err){
            console.log(err);
        } else {
@@ -16,7 +15,7 @@ router.get("/", function(req, res){
 
 //CREATE - add new album to DB
 router.post("/", function(req, res){
-    // get data from form and add to campgrounds array
+
     var artist = req.body.artist;
     var cover = req.body.cover;
     var info = req.body.info;
@@ -29,8 +28,8 @@ router.post("/", function(req, res){
     }
     var newCampground = {artist: artist, cover: cover, info: info, year: year, label: label, tracks: tracks, author: author}
     
-    // Create a new campground and save to DB
-    Campground.create(newAlbum, function(err, newlyCreated){
+   
+    Album.create(newAlbum, function(err, newlyCreated){
         if(err){
             console.log(err);
         } else {
@@ -40,7 +39,7 @@ router.post("/", function(req, res){
     });
 });
 
-//NEW - show form to create new campground
+
 router.get("/new", isLoggedIn, function(req, res){
    //creat empty .ejs file in views 
    res.render("albums/new.ejs"); 
