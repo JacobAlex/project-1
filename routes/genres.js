@@ -74,5 +74,13 @@ router.delete('/:id', function(req, res) {
     });
 });
 
+// middleware
+function isLoggedIn(req, res, next) {
+  if(req.isAuthenticated()) {
+    req.flash('success_msg', 'You logged in');
+    return next();
+  }
+  res.redirect('/login');
+}
 
 module.exports = router;
