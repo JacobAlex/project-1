@@ -1,0 +1,29 @@
+{
+  "name": "music_manager_v03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs":"*",
+    "express":"*",
+    "express-session":"*",
+    "express-validator":"*",
+    "bcryptjs":"*",
+    "mongoose":"*",
+    "mongodb":"*",
+    "passport":"*",
+    "passport-local":"*",
+    "passport-local-mongoose":"*",
+    "cookie-parser":"*",
+    "connect-flash":"*",
+    "path":"*",
+    "morgan":"*",
+    "multer":"*"
+  }
+}
