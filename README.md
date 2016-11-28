@@ -1,3 +1,3 @@
 # project-1
 
-Changed app.js file 
+Changes were made only in app.js file 
